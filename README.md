@@ -1,2 +1,2 @@
 # quiz-game
-Um jogo de pergunta e respostas
+quiz-game
