@@ -11,7 +11,7 @@ body {
 }
 
 .logo {
-  width: 50%;
+  width: 30%;
 }
 
 .iniciar {
@@ -28,15 +28,25 @@ body {
   text-align: center;
 }
 .celebro {
-  width: 70%;
+  width: 50%;
   margin: 20px 0 20px 0;
 }
 
 .pergunta {
   color: rgb(0, 0, 0);
-  font-size: 35px;
+  font-size: 25px;
   background: rgb(255, 255, 255);
   width: 60%;
   padding: 30px 20px 30px 20px;
   margin: 0 auto;
+}
+.rpd {
+  background: white;
+  padding: 10px 035px 010px 035px;
+  font-size: 25px;
+  border: none;
+  margin-top: 20px;
+}
+.rpd:active {
+  background: gray;
 }
