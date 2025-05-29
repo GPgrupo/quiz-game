@@ -27,3 +27,16 @@ body {
   background: black;
   text-align: center;
 }
+.celebro {
+  width: 70%;
+  margin: 20px 0 20px 0;
+}
+
+.pergunta {
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  background: rgb(255, 255, 255);
+  width: 60%;
+  padding: 30px 20px 30px 20px;
+  margin: 0 auto;
+}
