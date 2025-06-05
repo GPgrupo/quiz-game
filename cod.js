@@ -32,17 +32,63 @@ listaPerguntas = [
 }
 ]
 
-pergunta = null
+objPergunta = null
+
+telaInicial = document.querySelector(".tela-inicial")
+telaPergunta = document.querySelector(".tela-pergunta")
+telaGanhou = document.querySelector(".tela-ganhou")
+telaPerdeu = document.querySelector(".tela-perdeu")
 
 btninciar = document.querySelector(".iniciar")
 btninciar.addEventListener("click", iniciarJogo)
 
+divPergunta = document.querySelector(".pergunta");
+
+botao0 = document.querySelector(".opcao0")
+botao1 = document.querySelector(".opcao1")
+botao2 = document.querySelector(".opcao2")
+botao3 = document.querySelector(".opcao3")
+
+telaGanhou.addEventListenerif ("click", () => {
+  telaGanhou.style.display = "none"
+  iniciarJogo()
+})
+
+botao0.addEventListener("click", () => {
+  if (objPergunta.correta == 0) {
+    mostrarGanhou()
+  }else {
+    mostrarPerdeu()
+  }
+})
+
+botao1.addEventListener("click", () => {
+  if (objPergunta.correta == 1) {
+    mostrarGanhou()
+  }else {
+    mostrarPerdeu()
+  }
+})
+
+botao2.addEventListener("click", () => {
+  if (objPergunta.correta == 2) {
+    mostrarGanhou()
+  }else {
+    mostrarPerdeu()
+  }
+})
+
+botao3.addEventListener("click", () => {
+  if (objPergunta.correta == 3) {
+    mostrarGanhou()
+  }else {
+    mostrarPerdeu()
+  }
+})
+
 function iniciarJogo() {
-  telaInicial = document.querySelector(".tela-inicial")
   telaInicial.style.display = "none"
-  
-  telapeg = document.querySelector(".tela-pergunta")
-  telapeg.style.display = "block"
+  telaPergunta.style.display = "block"
 
 mostraPergunta()
 }
@@ -50,7 +96,7 @@ mostraPergunta()
 function mostraPergunta() {
   objPergunta = listaPerguntas[0];
   textoPergunta = document.createTextNode(objPergunta.pergunta);
-  divPergunta = document.querySelector(".pergunta");
+  
   divPergunta.appendChild(textoPergunta);
   
 
@@ -69,4 +115,14 @@ function mostraPergunta() {
   txtOpcao4 = document.createTextNode(objPergunta.opcoes[3]);
   botao3 = document.querySelector(".opcao3");
   botao3.appendChild(txtOpcao4);
+}
+
+function mostrarGanhou(){
+  telaPergunta.style.display = "none"
+  telaGanhou.style.display = "block"
+}
+
+function mostrarPerdeu() {
+  telaPergunta.style.display = "none"
+  telaPerdeu.style.display = "block"
 }
