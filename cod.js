@@ -49,40 +49,40 @@ botao1 = document.querySelector(".opcao1")
 botao2 = document.querySelector(".opcao2")
 botao3 = document.querySelector(".opcao3")
 
-telaGanhou.addEventListenerif ("click", () => {
+telaGanhou.addEventListener ("click", () => {
   telaGanhou.style.display = "none"
   iniciarJogo()
 })
 
 botao0.addEventListener("click", () => {
   if (objPergunta.correta == 0) {
-    mostrarGanhou()
+    mostraGanhou()
   }else {
-    mostrarPerdeu()
+    mostraPerdeu()
   }
 })
 
 botao1.addEventListener("click", () => {
   if (objPergunta.correta == 1) {
-    mostrarGanhou()
+    mostraGanhou()
   }else {
-    mostrarPerdeu()
+    mostraPerdeu()
   }
 })
 
 botao2.addEventListener("click", () => {
   if (objPergunta.correta == 2) {
-    mostrarGanhou()
+    mostraGanhou()
   }else {
-    mostrarPerdeu()
+    mostraPerdeu()
   }
 })
 
 botao3.addEventListener("click", () => {
   if (objPergunta.correta == 3) {
-    mostrarGanhou()
+    mostraGanhou()
   }else {
-    mostrarPerdeu()
+    mostraPerdeu()
   }
 })
 
@@ -117,12 +117,12 @@ function mostraPergunta() {
   botao3.appendChild(txtOpcao4);
 }
 
-function mostrarGanhou(){
+function mostraGanhou() {
   telaPergunta.style.display = "none"
   telaGanhou.style.display = "block"
 }
 
-function mostrarPerdeu() {
+function mostraPerdeu() {
   telaPergunta.style.display = "none"
   telaPerdeu.style.display = "block"
 }
