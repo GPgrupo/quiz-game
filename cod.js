@@ -38,6 +38,7 @@ telaInicial = document.querySelector(".tela-inicial")
 telaPergunta = document.querySelector(".tela-pergunta")
 telaGanhou = document.querySelector(".tela-ganhou")
 telaPerdeu = document.querySelector(".tela-perdeu")
+telaFinal = document.querySelector(".tela-final")
 
 btninciar = document.querySelector(".iniciar")
 btninciar.addEventListener("click", iniciarJogo)
@@ -52,7 +53,12 @@ perguntaAtual = 0
 
 telaGanhou.addEventListener ("click", () => {
   telaGanhou.style.display = "none"
-  iniciarJogo()
+  if (perguntaAtual == 3) {
+      mostraFinal()
+    }
+  else {
+    iniciarJogo()
+  }
 })
 telaPerdeu.addEventListener ("click", () => {
   telaPerdeu.style.display = "none"
@@ -63,15 +69,17 @@ telaPerdeu.addEventListener ("click", () => {
 botao0.addEventListener("click", () => {
   if (objPergunta.correta == 0) {
     mostraGanhou()
-  }else {
-    mostraPerdeu()
+}
+else {
+  mostraPerdeu()
   }
 })
 
 botao1.addEventListener("click", () => {
   if (objPergunta.correta == 1) {
     mostraGanhou()
-  }else {
+  }
+  else {
     mostraPerdeu()
   }
 })
@@ -79,7 +87,8 @@ botao1.addEventListener("click", () => {
 botao2.addEventListener("click", () => {
   if (objPergunta.correta == 2) {
     mostraGanhou()
-  }else {
+  }
+    else {
     mostraPerdeu()
   }
 })
@@ -87,9 +96,11 @@ botao2.addEventListener("click", () => {
 botao3.addEventListener("click", () => {
   if (objPergunta.correta == 3) {
     mostraGanhou()
-  }else {
+  }
+  else {
     mostraPerdeu()
   }
+  
 })
 
 function iniciarJogo() {
@@ -136,4 +147,9 @@ function mostraGanhou() {
 function mostraPerdeu() {
   telaPergunta.style.display = "none"
   telaPerdeu.style.display = "block"
+}
+
+function mostraFinal() {
+  telaPergunta.style.display = "none"
+  telaFinal.style.display = "block"
 }
