@@ -65,6 +65,11 @@ telaPerdeu.addEventListener ("click", () => {
   telaInicial.style.display = "block"
   perguntaAtual = 0
 })
+telaFinal.addEventListener ("click", () => {
+  telaFinal.style.display = "none"
+  telaInicial.style.display = "block"
+  perguntaAtual = 0
+})
 
 botao0.addEventListener("click", () => {
   if (objPergunta.correta == 0) {
